@@ -17,7 +17,11 @@
 
         musicBtn.on("click", function() {
 			musicBox.toggleClass("toggle-music-box");
+			musicBox.show();
             return false;
+        })
+		musicBtn.on("focusout", function() {
+			musicBox.hide();
         })
     }
 	// Back to Top js
