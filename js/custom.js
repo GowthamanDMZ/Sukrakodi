@@ -16,9 +16,9 @@
             musicBox = $(".music-holder");
 
         musicBtn.on("click", function() {
-			musicBox.toggleClass("toggle-music-box");
-			musicBox.show();
-            return false;
+		musicBox.show();
+		musicBox.toggleClass("toggle-music-box");
+	    return false;
         })
 		musicBtn.on("focusout", function() {
 			musicBox.hide();
