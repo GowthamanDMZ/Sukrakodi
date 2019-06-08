@@ -11,19 +11,24 @@
 	jQuery(document).ready(function($) {
 
 	var $this = $(window);
+		
 	if($(".music-box").length) {
 		var musicBtn = $(".music-box-toggle-btn"),
             musicBox = $(".music-holder");
 
         musicBtn.on("click", function() {
-		musicBox.show();
-		musicBox.toggleClass("toggle-music-box");
-	    return false;
+			musicBox.show();
+			musicBox.toggleClass("toggle-music-box");
+			return false;
         })
-		musicBtn.on("focusout", function() {
-			musicBox.hide();
+		
+		$(window).on("click", function() {
+			musicBox.fadeOut();
+			return false;
         })
-    }
+	}
+	
+	
 	// Back to Top js
 	$(window).scroll(function(){ 
         if ($(this).scrollTop() > 100) { 
