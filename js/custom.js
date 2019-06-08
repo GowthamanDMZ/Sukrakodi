@@ -22,10 +22,6 @@
 			return false;
         })
 		
-		$(window).on("click", function() {
-			musicBox.fadeOut();
-			return false;
-        })
 	}
 	
 	
